@@ -1,0 +1,16 @@
+^\.git$
+^\.gitignore$
+^\.Rproj\.user$
+^\.DS_Store$
+^\.travis\.yml$
+^README\.Rmd$
+^vignettes$
+^tests$
+^docs$
+^data-raw$
+^\.github$
+^cran-comments\.md$
+^CODE_OF_CONDUCT\.md$
+^CONTRIBUTING\.md$
+^NEWS\.md$
+^pkgdown$
