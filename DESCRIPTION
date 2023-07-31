@@ -1,0 +1,16 @@
+Package: eodhd
+Title: EODHD APIs R Financial Library
+Version: 1.0.0
+Authors@R: 
+    person("Ivanchenko Gleb", email = "kross_10@mail.ru", role = c("aut", "cre"))
+Description: A brief description of what your package does.
+License: MIT + file LICENSE
+URL: https://github.com/EodHistoricalData/EODHD-APIs-R-Financial-Library
+BugReports: https://github.com/EodHistoricalData/EODHD-APIs-R-Financial-Library/issues
+Imports:
+    httr
+	jsonlite
+Suggests:
+    testthat
+LazyData: true
+RoxygenNote: 7.2.3

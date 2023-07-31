@@ -14,3 +14,7 @@
 ^CONTRIBUTING\.md$
 ^NEWS\.md$
 ^pkgdown$
+$\.Rproj
+$\.RData
+$\.Rproj.user
+$\.Rhistory

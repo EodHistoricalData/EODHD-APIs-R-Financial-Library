@@ -3,6 +3,7 @@
 .Rhistory
 .RData
 .Ruserdata
+*.R.Rproj
 
 # R package specific
 .Rcheck/
@@ -30,3 +31,4 @@ R/generated/
 
 # Windows temporary files
 Thumbs.db
+.Rproj.user
