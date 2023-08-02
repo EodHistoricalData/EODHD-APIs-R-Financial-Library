@@ -18,6 +18,3 @@ rest_get_method <- function(api_key, endpoint = "", uri = "", querystring = list
   return(content(resp, as = "parsed"))
 }
 
-rest_get_method(api_key = "64bce94f81ae02.82666688", 
-                endpoint = "bond-fundamentals",
-                uri ="DE000CB83CF0")
