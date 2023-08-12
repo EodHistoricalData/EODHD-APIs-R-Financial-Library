@@ -1,1 +1,1 @@
-install.packages("stringr", repos=NULL)
+install.packages("devtools", repos="https://cran.rstudio.com")
