@@ -35,8 +35,18 @@ rest_get_method <- function(api_key, endpoint = "", uri = "", querystring = list
   
   resp <- GET(url = url, query = querystring)
   
-  if (status_code(resp) != 200) {
-    stop("Cannot get data")
+  if (status_code(resp) == 403) {
+    errors <- list(error = 403, message = 'Access forbidden')
+    return(errors)
+  } else if (status_code(resp) == 400) {
+    errors <- list(error = 400, message = 'Bad request')
+    return(errors)
+  } else if (status_code(resp) == 500) {
+    errors <- list(error = 500, message = 'Internal Server Error')
+    return(errors)
+  } else if (status_code(resp) == 503) {
+    errors <- list(error = 503, message = 'Service Unavailable')
+    return(errors)
   }
   
   return(content(resp, as = "parsed"))
