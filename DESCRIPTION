@@ -5,12 +5,13 @@ Authors@R:
     person("Ivanchenko Gleb", email = "kross_10@mail.ru", role = c("aut", "cre"))
 Description: Official EODHD API R Library
 License: MIT + file LICENSE
+Encoding: UTF-8
 URL: https://github.com/EodHistoricalData/EODHD-APIs-R-Financial-Library
 BugReports: https://github.com/EodHistoricalData/EODHD-APIs-R-Financial-Library/issues
-Imports:
-    httr
-	jsonlite
 Suggests:
     testthat
+Imports:
+    httr,
+    jsonlite
 LazyData: true
 RoxygenNote: 7.2.3
