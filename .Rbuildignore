@@ -18,3 +18,4 @@ $\.Rproj
 $\.RData
 $\.Rproj.user
 $\.Rhistory
+^.*\.Rproj$

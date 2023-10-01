@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get options data
@@ -28,16 +28,16 @@ source("../R/BaseAPI.R")
 #' @export
 get_options_data <- function(api_token, ticker, date_to = NULL, date_from = NULL,
                               trade_date_to = NULL, trade_date_from = NULL, contract_name = NULL) {
-  
+
   endpoint <- 'options'
   if (is.null(ticker) || ticker == "") {
     stop("Ticker is empty. You need to add ticker to args")
   }
-  
+
   uri <- ticker
-  
+
   query_string <- list()
-  
+
   if (!is.null(date_to)) {
     query_string$date_to <- as.character(date_to)
   }
@@ -53,6 +53,6 @@ get_options_data <- function(api_token, ticker, date_to = NULL, date_from = NULL
   if (!is.null(contract_name)) {
     query_string$contract_name <- as.character(contract_name)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string, uri = uri))
 }

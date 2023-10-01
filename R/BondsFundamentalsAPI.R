@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get bonds fundamentals data
@@ -24,7 +24,7 @@ get_bonds_fundamentals_data <- function(api_token, isin) {
   }
 
   uri <- isin
-  
+
   return(rest_get_method(api_key=api_token, endpoint=endpoint, uri=uri))
 }
 

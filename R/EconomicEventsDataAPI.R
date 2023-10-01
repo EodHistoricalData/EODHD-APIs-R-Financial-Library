@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get economic events data
@@ -28,11 +28,11 @@ source("../R/BaseAPI.R")
 #' @export
 get_economic_events_data <- function(api_token, date_from = NULL, date_to = NULL,
                                      country = NULL, comparison = NULL, offset = NULL, limit = NULL) {
-  
+
   endpoint <- 'economic-events'
-  
+
   query_string <- list()
-  
+
   if (!is.null(date_to)) {
     query_string$date_to <- as.character(date_to)
   }
@@ -51,6 +51,6 @@ get_economic_events_data <- function(api_token, date_from = NULL, date_to = NULL
   if (!is.null(limit)) {
     query_string$limit <- as.character(limit)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
 }

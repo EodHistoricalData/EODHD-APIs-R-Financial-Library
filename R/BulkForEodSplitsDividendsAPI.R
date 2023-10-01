@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get bulk fundamentals data
@@ -26,12 +26,12 @@ source("../R/BaseAPI.R")
 #' @export
 get_bulk_eod_splits_dividends_data = function(api_token, country = 'US', type = NULL, date = NULL,
                                       symbols = NULL, filter = NULL) {
-  
+
   endpoint <- 'eod-bulk-last-day'
   uri <- country
-      
+
   query_string <- list()
-      
+
   if (!is.null(type)) {
     query_string$type <- as.character(type)
   }
@@ -44,7 +44,7 @@ get_bulk_eod_splits_dividends_data = function(api_token, country = 'US', type = 
   if (!is.null(filter)) {
     query_string$filter <- as.character(filter)
   }
-      
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, uri = uri, querystring = query_string))
 }
 
