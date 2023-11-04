@@ -23,11 +23,13 @@ source("R/BaseAPI.R")
 #' comparison <- "qoq"
 #' offset <- "0"
 #' limit <- "50"
-#' result <- gget_economic_events_data(api_token, date_from, date_to, country, comparison, offset, limit)
+#' result <- get_economic_events_data(api_token, date_from, date_to, country, comparison, offset, limit)
 #'
 #' @export
-get_economic_events_data <- function(api_token, date_from = NULL, date_to = NULL,
-                                     country = NULL, comparison = NULL, offset = NULL, limit = NULL) {
+get_economic_events_data <- function(api_token, date_from = NULL,
+                                     date_to = NULL, country = NULL,
+                                     comparison = NULL, offset = NULL,
+                                     limit = NULL) {
 
   endpoint <- 'economic-events'
 
@@ -52,5 +54,6 @@ get_economic_events_data <- function(api_token, date_from = NULL, date_to = NULL
     query_string$limit <- as.character(limit)
   }
 
-  return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
+  return(rest_get_method(api_key = api_token, endpoint = endpoint,
+                         querystring = query_string))
 }

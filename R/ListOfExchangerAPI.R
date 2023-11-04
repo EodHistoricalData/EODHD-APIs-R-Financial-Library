@@ -11,7 +11,7 @@ source("R/BaseAPI.R")
 #'
 #' @examples
 #' api_token <- "demo"
-#' result <- get_bonds_fundamentals_data(api_token)
+#' result <- get_list_of_exchanges(api_token)
 #'
 #' @export
 get_list_of_exchanges <- function(api_token) {

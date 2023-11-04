@@ -21,8 +21,8 @@ source("R/BaseAPI.R")
 #' t <- NULL
 #' from_date <- "2017-09-10"
 #' to_date <- "2017-09-12"
-#' limit <- "50" Default value: 50, minimum value: 1, maximum value: 1000.
-#' offset <- "100" to get 100 symbols starting from 200 you should use limit=100 and offset=200.
+#' limit <- "50"
+#' offset <- "100"
 #' result <- financial_news(api_token, s, t, from_date, to_date, limit, offset)
 #'
 #' @export

@@ -20,20 +20,26 @@ get_technical_indicator_data(
 
 \item{ticker}{consists of two parts: [SYMBOL_NAME].[EXCHANGE_ID]}
 
-\item{func}{the function that will be applied to data series to get technical indicator data.}
+\item{func}{the function that will be applied to data series to get technical
+indicator data.}
 
-\item{period}{the number of data points used to calculate each moving average value.}
+\item{period}{the number of data points used to calculate each moving average
+value.}
 
 \item{date_from}{date from with format Y-m-d.}
 
 \item{date_to}{date from with format Y-m-d.}
 
-\item{order}{use ‘a’ for ascending dates (from old to new) and ‘d’ for descending dates (from new to old).
+\item{order}{use ‘a’ for ascending dates (from old to new) and ‘d’ for
+descending dates (from new to old).
 By default, dates are shown in ascending order.}
 
-\item{splitadjusted_only}{By default, we calculate data for some functions by closes adjusted with splits and dividends.
-If you need to calculate the data by closes adjusted only with splits, set this parameter to ‘1’.
-Works with the following functions: sma, ema, wma, volatility, rsi, slope, and macd.}
+\item{splitadjusted_only}{By default, we calculate data for some functions
+by closes adjusted with splits and dividends.
+If you need to calculate the data by closes adjusted only with splits, set
+this parameter to ‘1’.
+Works with the following functions: sma, ema, wma, volatility, rsi, slope,
+and macd.}
 }
 \value{
 A list containing the technical indicator data.
@@ -50,6 +56,7 @@ date_from <- "2017-09-10"
 date_to <- "2017-09-12"
 order <- "d"
 splitadjusted_only <- "1"
-result <- get_technical_indicator_data(api_token, ticker, function, period, date_from, date_to, order, splitadjusted_only)
+result <- get_technical_indicator_data(api_token, ticker, func, period,
+date_from, date_to, order, splitadjusted_only)
 
 }

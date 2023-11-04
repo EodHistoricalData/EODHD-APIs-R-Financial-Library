@@ -37,8 +37,8 @@ api_token <- "demo"
 country <- 'US'
 type <- 'splits'
 date <- "2010-09-21"
-symbols <- "MSFT" or "BMW.XETRA" for non-us tickets
+symbols <- "MSFT"
 filter <- "extended"
-result <- get_bulk_fundamentals_data(api_token, country, date, symbols, filter)
+result <- get_bulk_eod_splits_dividends_data(api_token, country, type, date, symbols, filter)
 
 }

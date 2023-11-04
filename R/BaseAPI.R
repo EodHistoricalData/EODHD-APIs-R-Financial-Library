@@ -1,5 +1,4 @@
 library(httr)
-library(jsonlite)
 
 #' Generic REST GET method
 #'
@@ -22,19 +21,18 @@ library(jsonlite)
 #' result <- rest_get_method(api_key, endpoint, uri, querystring)
 #' print(result)
 #'
-#' @importFrom httr GET
-#' @importFrom jsonlite content
+#' @importFrom httr GET status_code content
 #'
 #' @export
 rest_get_method <- function(api_key, endpoint = "", uri = "", querystring = list()) {
   api_url <- "https://eodhistoricaldata.com/api"
-  
+
   url <- paste0(api_url, "/", endpoint, "/", uri)
   querystring$fmt <- "json"
   querystring$api_token <- api_key
-  
+
   resp <- GET(url = url, query = querystring)
-  
+
   if (status_code(resp) == 403) {
     errors <- list(error = 403, message = 'Access forbidden')
     return(errors)
@@ -48,6 +46,6 @@ rest_get_method <- function(api_key, endpoint = "", uri = "", querystring = list
     errors <- list(error = 503, message = 'Service Unavailable')
     return(errors)
   }
-  
+
   return(content(resp, as = "parsed"))
 }

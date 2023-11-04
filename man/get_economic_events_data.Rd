@@ -43,6 +43,7 @@ country <- "US"
 comparison <- "qoq"
 offset <- "0"
 limit <- "50"
-result <- gget_economic_events_data(api_token, date_from, date_to, country, comparison, offset, limit)
+result <- get_economic_events_data(api_token, date_from, date_to, country,
+comparison, offset, limit)
 
 }

@@ -28,7 +28,7 @@ This function retrieves details trading hours, stock market holidays and symbol 
 }
 \examples{
 api_token <- "demo"
-code <- US
+code <- "US"
 from_date <- "2017-09-10"
 to_date <- "2017-09-12"
 

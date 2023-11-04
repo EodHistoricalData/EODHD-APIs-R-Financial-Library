@@ -28,7 +28,7 @@ source("R/BaseAPI.R")
 #' date_to <- "2017-09-12"
 #' order <- "d"
 #' splitadjusted_only <- "1"
-#' result <- get_technical_indicator_data(api_token, ticker, function, period, date_from, date_to, order, splitadjusted_only)
+#' result <- get_technical_indicator_data(api_token, ticker, func, period, date_from, date_to, order, splitadjusted_only)
 #'
 #' @export
 

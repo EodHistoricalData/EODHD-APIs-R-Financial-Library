@@ -17,7 +17,7 @@ source("R/BaseAPI.R")
 #' @examples
 #' api_token <- "demo"
 #' sort <- "market_capitalization.desc"
-#' filters <- "[["market_capitalization",">",1000],["name","match","apple"],["code","=","AAPL"],["exchange","=","us"],["sector","=","Technology"]]"
+#' filters <- NULL
 #' limit <- "1"
 #' signals <- "bookvalue_neg"
 #' offset <- "50"
