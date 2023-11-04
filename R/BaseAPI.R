@@ -25,7 +25,8 @@ library(httr)
 #'
 #' @export
 rest_get_method <- function(api_key, endpoint = "", uri = "", querystring = list()) {
-  api_url <- "https://eodhistoricaldata.com/api"
+
+  api_url <- "https://eodhd.com/api"
 
   url <- paste0(api_url, "/", endpoint, "/", uri)
   querystring$fmt <- "json"
