@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get upcoming splits data
@@ -19,10 +19,10 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_upcoming_splits_data <- function(api_token, from_date = NULL, to_date = NULL) {
-  
+
   endpoint <- 'calendar/splits'
   query_string <- list()
-  
+
   if (!is.null(from_date)) {
     query_string$from_date <- as.character(from_date)
   }

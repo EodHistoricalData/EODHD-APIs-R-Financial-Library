@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get earning trends data
@@ -17,11 +17,11 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_earning_trends_data <- function(api_token, symbols) {
-  
+
   endpoint <- 'calendar/trends'
   query_string <- list()
-  
+
   query_string$symbols <- as.character(symbols)
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
 }

@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get insider transactions data
@@ -23,10 +23,10 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_insider_transactions_data <- function(api_token, date_from = NULL, date_to = NULL, code = NULL, limit = NULL) {
-  
+
   endpoint <- 'insider-transactions'
   query_string <- list()
-  
+
   if (!is.null(date_to)) {
     query_string$date_to <- as.character(date_to)
   }
@@ -39,6 +39,6 @@ get_insider_transactions_data <- function(api_token, date_from = NULL, date_to =
   if (!is.null(limit)) {
     query_string$limit <- as.character(limit)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
 }

@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get macro indicators data
@@ -19,15 +19,15 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_macro_indicators_data <- function(api_token, country, indicator = NULL) {
-  
+
   endpoint <- 'macro-indicator'
   uri <- country
-  
+
   query_string <- list()
-  
+
   if (!is.null(indicator)) {
     query_string$indicator <- as.character(indicator)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string, uri = uri))
 }

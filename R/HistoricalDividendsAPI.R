@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get historical dividends data
@@ -21,21 +21,21 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_historical_dividends_data <- function(api_token, ticker, date_from = NULL, date_to = NULL) {
-  
+
   endpoint <- 'div/'
-  
+
   if (is.null(ticker) || grepl("^\\s*$", ticker)) {
     stop("Ticker is empty. You need to add ticker to args")
   }
-  
+
   query_string <- list()
-  
+
   if (!is.null(date_to)) {
     query_string$date_to <- as.character(date_to)
   }
   if (!is.null(date_from)) {
     query_string$date_from <- as.character(date_from)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, uri = ticker, querystring = query_string))
 }

@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get list of exchanges
@@ -11,12 +11,12 @@ source("../R/BaseAPI.R")
 #'
 #' @examples
 #' api_token <- "demo"
-#' result <- get_bonds_fundamentals_data(api_token)
+#' result <- get_list_of_exchanges(api_token)
 #'
 #' @export
 get_list_of_exchanges <- function(api_token) {
-  
+
   endpoint <- 'exchanges-list'
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint))
 }

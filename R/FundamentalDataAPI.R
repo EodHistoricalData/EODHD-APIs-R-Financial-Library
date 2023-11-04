@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get fundamentals data data
@@ -17,12 +17,12 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_fundamentals_data <- function(api_token, ticker) {
-  
+
   endpoint <- 'fundamentals/'
-  
+
   if (is.null(ticker) || ticker == "") {
     stop("Ticker is empty. You need to add ticker to args")
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, uri = ticker))
 }

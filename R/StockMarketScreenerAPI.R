@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Stock market screener
@@ -17,7 +17,7 @@ source("../R/BaseAPI.R")
 #' @examples
 #' api_token <- "demo"
 #' sort <- "market_capitalization.desc"
-#' filters <- "[["market_capitalization",">",1000],["name","match","apple"],["code","=","AAPL"],["exchange","=","us"],["sector","=","Technology"]]"
+#' filters <- NULL
 #' limit <- "1"
 #' signals <- "bookvalue_neg"
 #' offset <- "50"
@@ -25,11 +25,11 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 stock_market_screener <- function(api_token, sort = NULL, filters = NULL, limit = NULL, signals = NULL, offset = NULL) {
-  
+
   endpoint <- 'screener'
-  
+
   query_string <- list()
-  
+
   if (!is.null(sort)) {
     query_string$sort <- as.character(sort)
   }
@@ -45,6 +45,6 @@ stock_market_screener <- function(api_token, sort = NULL, filters = NULL, limit 
   if (!is.null(offset)) {
     query_string$offset <- as.character(offset)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
 }

@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get live stock prices
@@ -19,17 +19,17 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_live_stock_prices <- function(api_token, ticker, s = NULL) {
-  
+
   endpoint <- 'real-time/'
   query_string <- list()
-  
+
   if (is.null(ticker) || ticker == "") {
     stop("Ticker is empty. You need to add ticker to args")
   }
-  
+
   if (!is.null(s)) {
     query_string$s <- as.character(s)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, uri = ticker, querystring = query_string))
 }

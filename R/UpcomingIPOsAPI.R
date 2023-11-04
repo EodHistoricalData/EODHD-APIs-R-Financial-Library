@@ -1,4 +1,4 @@
-source("../R/BaseAPI.R")
+source("R/BaseAPI.R")
 
 
 #' Get upcoming IPOs data
@@ -19,17 +19,17 @@ source("../R/BaseAPI.R")
 #'
 #' @export
 get_upcoming_IPOs_data <- function(api_token, from_date = NULL, to_date = NULL) {
-  
+
   endpoint <- 'calendar/ipos'
-  
+
   query_string <- list()
-  
+
   if (!is.null(from_date)) {
     query_string$from_date <- as.character(from_date)
   }
   if (!is.null(to_date)) {
     query_string$to_date <- as.character(to_date)
   }
-  
+
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
 }
