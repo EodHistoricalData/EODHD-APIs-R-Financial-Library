@@ -6,7 +6,7 @@
 \usage{
 get_options_data(
   api_token,
-  ticker,
+  symbol,
   date_to = NULL,
   date_from = NULL,
   trade_date_to = NULL,
@@ -17,7 +17,7 @@ get_options_data(
 \arguments{
 \item{api_token}{The API token for authentication.}
 
-\item{ticker}{Required - Could be any supported symbol. No default value.}
+\item{symbol}{Required - Could be any supported symbol. No default value.}
 
 \item{date_to}{date from with format Y-m-d}
 
@@ -37,13 +37,13 @@ This function retrieves options data from the API.
 }
 \examples{
 api_token <- "demo"
-ticker <- "AAPL.US"
+symbol <- "AAPL.US"
 date_to <- "2017-09-10"
 date_from <- "2017-09-12"
 trade_date_to <- "2010-05-15"
 trade_date_from <- "2010-05-16"
 contract_name <- "AAPL230818C00055000"
-result <- get_options_data(api_token, date_to, date_from, trade_date_to,
+result <- get_options_data(api_token, symbol, date_to, date_from, trade_date_to,
 trade_date_from, contract_name)
 
 }

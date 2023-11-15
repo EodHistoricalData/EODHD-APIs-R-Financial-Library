@@ -30,8 +30,8 @@ get_options_data <- function(api_token, symbol, date_to = NULL, date_from = NULL
                               trade_date_to = NULL, trade_date_from = NULL, contract_name = NULL) {
 
   endpoint <- 'options'
-  if (is.null(ticker) || ticker == "") {
-    stop("Ticker is empty. You need to add ticker to args")
+  if (is.null(symbol) || symbol == "") {
+    stop("Ticker is empty. You need to add symbol to args")
   }
 
   uri <- symbol

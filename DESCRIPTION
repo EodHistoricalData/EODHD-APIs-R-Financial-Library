@@ -1,7 +1,7 @@
 Package: eodhd
 Type: Package
 Title: Official 'eodhd' API R Financial Library
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: 
   c(person("Ivanchenko Gleb", "Developer", role = c("aut", "cre"), email = "kross_10@mail.ru"),
     person("EODHD", "Maintainer", role = c("cph"), email = "support@eodhistoricaldata.com"))
