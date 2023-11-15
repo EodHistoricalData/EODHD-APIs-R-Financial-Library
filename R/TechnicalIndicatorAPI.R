@@ -62,10 +62,10 @@ get_technical_indicator_data <- function(api_token, ticker, func, period = 50,
   query_string$"function" <- as.character(func)
 
   if (!is.null(date_to)) {
-    query_string$date_to <- as.character(date_to)
+    query_string$to <- as.character(date_to)
   }
   if (!is.null(date_from)) {
-    query_string$date_from <- as.character(date_from)
+    query_string$from <- as.character(date_from)
   }
 
   return(rest_get_method(api_key = api_token, endpoint = endpoint, uri = ticker, querystring = query_string))

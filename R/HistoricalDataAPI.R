@@ -38,10 +38,10 @@ get_eod_historical_stock_market_data <- function(api_token, symbol, from_date = 
   query_string <- list()
 
   if (!is.null(from_date)) {
-    query_string$from_date <- as.character(from_date)
+    query_string$from <- as.character(from_date)
   }
   if (!is.null(to_date)) {
-    query_string$to_date <-  as.character(to_date)
+    query_string$to <-  as.character(to_date)
   }
   if (!is.null(period)) {
     query_string$period <-  as.character(period)
