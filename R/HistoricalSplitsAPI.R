@@ -31,10 +31,10 @@ get_historical_splits_data <- function(api_token, ticker, date_from = NULL, date
   query_string <- list()
 
   if (!is.null(date_to)) {
-    query_string$date_to <- as.character(date_to)
+    query_string$to <- as.character(date_to)
   }
   if (!is.null(date_from)) {
-    query_string$date_from <- as.character(date_from)
+    query_string$from <- as.character(date_from)
   }
 
   return(rest_get_method(api_key = api_token, endpoint = endpoint, uri = ticker, querystring = query_string))

@@ -39,10 +39,10 @@ get_intraday_historical_data <- function(api_token, symbol, from_unix_time = NUL
   query_string <- list()
 
   if (!is.null(from_unix_time)) {
-    query_string$from_unix_time <- as.character(from_unix_time)
+    query_string$from <- as.character(from_unix_time)
   }
   if (!is.null(to_unix_time)) {
-    query_string$to_unix_time <-  as.character(to_unix_time)
+    query_string$to <-  as.character(to_unix_time)
   }
   if (!is.null(interval)) {
     query_string$interval <-  as.character(interval)

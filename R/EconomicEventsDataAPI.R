@@ -36,10 +36,10 @@ get_economic_events_data <- function(api_token, date_from = NULL,
   query_string <- list()
 
   if (!is.null(date_to)) {
-    query_string$date_to <- as.character(date_to)
+    query_string$to <- as.character(date_to)
   }
   if (!is.null(date_from)) {
-    query_string$date_from <- as.character(date_from)
+    query_string$from <- as.character(date_from)
   }
   if (!is.null(country)) {
     query_string$country <- as.character(country)

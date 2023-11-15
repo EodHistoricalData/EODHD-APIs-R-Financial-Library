@@ -28,10 +28,10 @@ get_insider_transactions_data <- function(api_token, date_from = NULL, date_to =
   query_string <- list()
 
   if (!is.null(date_to)) {
-    query_string$date_to <- as.character(date_to)
+    query_string$to <- as.character(date_to)
   }
   if (!is.null(date_from)) {
-    query_string$date_from <- as.character(date_from)
+    query_string$from <- as.character(date_from)
   }
   if (!is.null(code)) {
     query_string$code <- as.character(code)

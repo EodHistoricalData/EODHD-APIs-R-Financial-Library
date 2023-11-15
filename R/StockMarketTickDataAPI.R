@@ -44,8 +44,8 @@ get_stock_market_tick_data <- function(api_token, symbol, from_timestamp,
   query_string <- list()
 
   query_string$symbols <- as.character(symbol)
-  query_string$symbols <- as.character(from_timestamp)
-  query_string$symbols <- as.character(to_timestamp)
+  query_string$from <- as.character(from_timestamp)
+  query_string$to <- as.character(to_timestamp)
 
   if (!is.null(limit)) {
     query_string$limit <-  as.character(limit)

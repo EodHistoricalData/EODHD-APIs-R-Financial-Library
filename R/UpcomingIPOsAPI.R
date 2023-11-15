@@ -25,10 +25,10 @@ get_upcoming_IPOs_data <- function(api_token, from_date = NULL, to_date = NULL) 
   query_string <- list()
 
   if (!is.null(from_date)) {
-    query_string$from_date <- as.character(from_date)
+    query_string$from <- as.character(from_date)
   }
   if (!is.null(to_date)) {
-    query_string$to_date <- as.character(to_date)
+    query_string$to <- as.character(to_date)
   }
 
   return(rest_get_method(api_key = api_token, endpoint = endpoint, querystring = query_string))
