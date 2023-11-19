@@ -8,7 +8,7 @@ https://eodhd.com
 ## Note
 
 Demo API key below is provided by EOD Historial Data for testing purposes
-<https://eodhd.com/financial-apis/new-real-time-data-api-websockets?utm_source=github&utm_medium=eod&utm_campaign=python_lib>
+<https://eodhd.com/financial-apis/new-real-time-data-api-websockets?utm_source=github&utm_medium=eod&utm_campaign=r_lib>
 
 ## Available functions
 
