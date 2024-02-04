@@ -19,15 +19,15 @@ source("R/BaseAPI.R")
 #'
 #' @examples
 #' api_token <- "demo"
-#' from_timestamp <- "1627896900"
-#' to_timestamp <- "1630575300"
+#' from_timestamp <- "1694354400"
+#' to_timestamp <- "1694455200"
 #' symbol <- "AAPL"
 #' limit <- 1
 #' result <- get_stock_market_tick_data(api_token, symbol, from_timestamp, to_timestamp, limit)
 #'
 #' @export
 get_stock_market_tick_data <- function(api_token, symbol, from_timestamp,
-                                       to_timestamp, limit = 2) {
+                                       to_timestamp, limit = 1) {
 
   endpoint <- 'ticks'
 
@@ -43,9 +43,9 @@ get_stock_market_tick_data <- function(api_token, symbol, from_timestamp,
 
   query_string <- list()
 
-  query_string$symbols <- as.character(symbol)
-  query_string$from <- as.character(from_timestamp)
-  query_string$to <- as.character(to_timestamp)
+  query_string$s <- as.character(symbol)
+  query_string$from <- numeric(from_timestamp)
+  query_string$to <- numeric(to_timestamp)
 
   if (!is.null(limit)) {
     query_string$limit <-  as.character(limit)
