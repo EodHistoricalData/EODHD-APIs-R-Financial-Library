@@ -43,7 +43,7 @@ date_from <- "2017-09-12"
 trade_date_to <- "2010-05-15"
 trade_date_from <- "2010-05-16"
 contract_name <- "AAPL230818C00055000"
-result <- get_options_data(api_token, symbol, date_to, date_from, trade_date_to,
+result <- get_options_data(api_token, date_to, date_from, trade_date_to,
 trade_date_from, contract_name)
 
 }

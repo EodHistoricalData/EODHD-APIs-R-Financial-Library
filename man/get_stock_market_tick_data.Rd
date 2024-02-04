@@ -9,7 +9,7 @@ get_stock_market_tick_data(
   symbol,
   from_timestamp,
   to_timestamp,
-  limit = 2
+  limit = 1
 )
 }
 \arguments{
@@ -35,8 +35,8 @@ This function retrieves stock market tick data from the API.
 }
 \examples{
 api_token <- "demo"
-from_timestamp <- "1627896900"
-to_timestamp <- "1630575300"
+from_timestamp <- "1694354400"
+to_timestamp <- "1694455200"
 symbol <- "AAPL"
 limit <- 1
 result <- get_stock_market_tick_data(api_token, symbol, from_timestamp, to_timestamp, limit)
