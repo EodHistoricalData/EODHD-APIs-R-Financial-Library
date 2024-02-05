@@ -3,8 +3,7 @@ Type: Package
 Title: Official 'eodhd' API R Financial Library
 Version: 1.0.4
 Authors@R: 
-  c(person("Ivanchenko Gleb", "Developer", role = c("aut", "cre"), email = "kross_10@mail.ru"),
-    person("EODHD", "Maintainer", role = c("cph"), email = "support@eodhistoricaldata.com"))
+  c(person("EODHD", "Maintainer", role = c("cph", "aut", "cre"), email = "support@eodhistoricaldata.com"))
 Description: Official 'eodhd' API R Library. It helps to get and work with financial data,
               historical data and etc. API reference available at <https://eodhd.com/financial-apis/>.
 License: MIT + file LICENSE
