@@ -1,3 +1,10 @@
+# Update
+Enjoy our second version of R Library (2024):
+https://github.com/EodHistoricalData/R-Library-for-financial-data-2024
+Current version is not available on CRAN anymore.
+
+
+
 # Official EODHD APIs R Library
 https://eodhd.com
 
